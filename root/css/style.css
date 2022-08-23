@@ -1,0 +1,259 @@
+/* GENÉRICOS */
+*{
+	margin: 0;}
+li{
+	list-style-type: none;}
+a{
+	text-decoration: none;
+	color: white;}
+.bground{
+	background-color: black;}
+.fontColor{
+	font-family: Assistant;
+	color: white;}
+.logo, ul{
+	display: flex;
+	justify-content: space-around;}
+
+	/* GRID PARA TODOS LOS HTMLS */
+.gridTodos{
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 
+	"header"
+	"main"
+	"footer"}
+.header{
+	grid-area: header;
+	position: fixed;
+	width: 100%;
+	padding-bottom: 1rem;}
+.main{
+	grid-area: main;
+    border-bottom-width: 100px;
+    border-bottom-color: white;}
+footer{
+	grid-area: footer;
+	display: flex;
+	padding: 1rem;
+	justify-content: center;}
+
+/* GRID PARA EL MAIN DEL INDEX */
+.gridMainIndex{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows:  auto auto auto;
+	grid-template-areas: 
+	"imgFondo imgFondo"
+	"slogan slogan"
+	"textoIzq textoDer"}
+.imgFondo{
+	grid-area: imgFondo;}
+.imgFondo img{width: 100%;}	
+.slogan{
+	grid-area: slogan;
+	font-size: 2rem;
+	padding: 2%;}
+.textoIzq{
+	grid-area: textoIzq;}
+.texttextoDeroDer{
+	grid-area: textoDer;}
+.imgFondo a img{
+	width: 100%;}
+div p{
+	padding-bottom : 20px;}
+.paddinTextoColumnas{
+padding-left: 15%;
+padding-right: 15%;}
+
+/* GRID PARA EL MAIN DE PRODUCTOS (VACUNOS, ALMACEN Y VINOS)*/
+.gridMainProductos{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: repeat(6, auto);
+	grid-template-areas:
+	"titulo titulo titulo titulo"
+	"productoF1C1 productoF1C2 productoF1C3 productoF1C4"
+	"productoF2C1 productoF2C2 productoF2C3 productoF2C4"
+	"productoF3C1 productoF3C2 productoF3C3 productoF3C4"
+	"productoF4C1 productoF4C2 productoF4C3 productoF4C4"
+	"productoF5C1 productoF5C2 productoF5C3 productoF5C4"
+	"productoF6C1 productoF6C2 productoF6C3 productoF6C4";
+	padding-top: 0px;
+	padding-left: 000px;}
+.titulo{grid-area: titulo;
+    text-align: center;
+    padding-bottom: 20px;}
+.productoF1C1{grid-area: productoF1C1;}
+.productoF1C2{grid-area: productoF1C2;}
+.productoF1C3{grid-area: productoF1C3;}
+.productoF1C4{grid-area: productoF1C4;}
+.productoF2C1{grid-area: productoF2C1;}
+.productoF2C2{grid-area: productoF2C2;}
+.productoF2C3{grid-area: productoF2C3;}
+.productoF2C4{grid-area: productoF2C4;}
+.productoF3C1{grid-area: productoF3C1;}
+.productoF3C2{grid-area: productoF3C2;} 
+.productoF3C3{grid-area: productoF3C3;} 
+.productoF3C4{grid-area: productoF3C4;} 
+.productoF4C1{grid-area: productoF4C1;} 
+.productoF4C2{grid-area: productoF4C2;} 
+.productoF4C3{grid-area: productoF4C3;} 
+.productoF4C4{grid-area: productoF4C4;} 
+.productoF5C1{grid-area: productoF5C1;} 
+.productoF5C2{grid-area: productoF5C2;} 
+.productoF5C3{grid-area: productoF5C3;} 
+.productoF5C4{grid-area: productoF5C4;} 
+.productoF6C1{grid-area: productoF6C1;} 
+.productoF6C2{grid-area: productoF6C2;} 
+.productoF6C3{grid-area: productoF6C3;} 
+.productoF6C4{grid-area: productoF6C4;}
+.gridMainProductos div img{width: 50%;}
+.gridMainProductos div {padding-left: 50px;}
+
+/* GRID PARA CONTACTO */
+.gridMainContacto{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"titulo"
+	"contacto";}
+h1{
+	grid-area: titulo;
+	display: flex;
+	justify-content: center;
+	padding-top: 300px;
+	color: white;}
+.contacto{grid-area: contacto;
+	padding-top: 50px;
+	padding-bottom: 100px;
+	justify-content: space-around;}
+form{
+	text-align: center;}
+.edt{
+	width: 310px;}
+
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+	/* GRID PARA TODOS LOS HEADERS */
+	.header{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto;
+		grid-template-areas: 
+		"logo"
+		"nav";}
+	.logo{
+		grid-area: logo;
+		width: 50%;	
+		padding-left: 25%;
+		justify-content: space-around;}
+	nav{
+		grid-area: nav;
+		display: flex;
+		justify-content: space-around;	
+		width: 100%;}
+	li{
+		display: flex;
+		justify-content: space-around;	
+		padding-right: 15px;}
+
+		/* GRID PARA EL MAIN DEL INDEX */
+	.gridMainIndex{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows:  auto auto auto auto;
+		grid-template-areas: 
+		"imgFondo"
+		"slogan"
+		"textoIzq"
+		" textoDer";
+	padding-top: 100px;}
+	.imgFondo{
+		grid-area: imgFondo;}
+	.slogan{
+		grid-area: slogan;
+		display: flex;
+		justify-content: center;
+		font-size: 20px;}
+	.textoIzq{
+		grid-area: textoIzq;}
+	.texttextoDeroDer{
+		grid-area: textoDer;}
+	.imgFondo a img{
+		width: 100%;}
+	div p{
+		padding-bottom : 20px;}
+	.paddinTextoColumnas{
+		padding-left: 15%;
+		padding-right: 15%;}
+
+	/* GRID PARA EL MAIN DE PRODUCTOS (VACUNOS, ALMACEN Y VINOS)*/
+	.gridMainProductos{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(25, auto);
+		grid-template-areas:
+		"titulo"
+		"productoF1C1"
+		"productoF1C2"
+		"productoF1C3"
+		"productoF1C4"
+		"productoF2C1"
+		"productoF2C2"
+		"productoF2C3"
+		"productoF2C4"
+		"productoF3C1"
+		"productoF3C2"
+		"productoF3C3"
+		"productoF3C4"
+		"productoF4C1"
+		"productoF4C2"
+		"productoF4C3"
+		"productoF4C4"
+		"productoF5C1"
+		"productoF5C2"
+		"productoF5C3"
+		"productoF5C4"
+		"productoF6C1"
+		"productoF6C2"
+		"productoF6C3"
+		"productoF6C4";
+		padding-top: 00px;
+		padding-left: 0px;}
+	.titulo{grid-area: titulo;
+		text-align: center;
+		padding-bottom: 20px;}
+	.productoF1C1{grid-area: productoF1C1;}
+	.productoF1C2{grid-area: productoF1C2;}
+	.productoF1C3{grid-area: productoF1C3;}
+	.productoF1C4{grid-area: productoF1C4;}
+	.productoF2C1{grid-area: productoF2C1;}
+	.productoF2C2{grid-area: productoF2C2;}
+	.productoF2C3{grid-area: productoF2C3;}
+	.productoF2C4{grid-area: productoF2C4;}
+	.productoF3C1{grid-area: productoF3C1;}
+	.productoF3C2{grid-area: productoF3C2;} 
+	.productoF3C3{grid-area: productoF3C3;} 
+	.productoF3C4{grid-area: productoF3C4;} 
+	.productoF4C1{grid-area: productoF4C1;} 
+	.productoF4C2{grid-area: productoF4C2;} 
+	.productoF4C3{grid-area: productoF4C3;} 
+	.productoF4C4{grid-area: productoF4C4;} 
+	.productoF5C1{grid-area: productoF5C1;} 
+	.productoF5C2{grid-area: productoF5C2;} 
+	.productoF5C3{grid-area: productoF5C3;} 
+	.productoF5C4{grid-area: productoF5C4;} 
+	.productoF6C1{grid-area: productoF6C1;} 
+	.productoF6C2{grid-area: productoF6C2;} 
+	.productoF6C3{grid-area: productoF6C3;} 
+	.productoF6C4{grid-area: productoF6C4;}
+	.gridMainProductos div img{width: 100%;}
+	.gridMainProductos div p{padding-left: 25px;}
+	
+	/* GRID PARA CONTACTO */
+	h1{padding-top: 130px;}
+	.contacto{padding-bottom: 100px;}}	
