@@ -38,6 +38,9 @@ footer{
 	display: flex;
 	padding: 1rem;
 	justify-content: center;}
+.logoWhatsApp{padding-right: 10px;}
+.logoInstagram{padding-left: 10px;}
+
 
 /* GRID PARA EL MAIN DEL INDEX */
 .gridMainIndex{
