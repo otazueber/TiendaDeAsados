@@ -11,7 +11,7 @@ a{
 .fontColor{
 	font-family: Assistant;
 	color: white;}
-.logo, ul{
+.contenedorLogo, logo, ul{
 	display: flex;
 	justify-content: space-around;}
 
@@ -112,8 +112,7 @@ padding-right: 15%;}
 .productoF6C2{grid-area: productoF6C2;} 
 .productoF6C3{grid-area: productoF6C3;} 
 .productoF6C4{grid-area: productoF6C4;}
-.gridMainProductos div img{width: 50%;}
-.gridMainProductos div {padding-left: 50px;}
+.gridMainProductos div {padding: 50px;}
 
 /* GRID PARA CONTACTO */
 .gridMainContacto{
@@ -137,7 +136,6 @@ form{
 	text-align: center;}
 .edt{
 	width: 310px;}
-
 
 /* MOBILE */
 @media screen and (max-width: 768px) {
@@ -260,3 +258,41 @@ form{
 	/* GRID PARA CONTACTO */
 	h1{padding-top: 130px;}
 	.contacto{padding-bottom: 100px;}}	
+
+
+/* TRANSICIONES Y ANIMACIONES (SOLO PARA DESKTOP)*/
+@media screen and (min-width: 769px) {
+	.gridMainProductos div img{
+		width: 50%;
+		padding: 10%;
+		transition: width 0s;
+	}
+	.gridMainProductos div img:hover{
+		width: 60%;
+		padding: 0%;
+		transition: width 1s;	
+	}
+	.logo{
+		transition: all 1s;
+	}
+	.logo:hover{
+		transform: rotate(360deg);
+		transition: rotate(360deg) 1s;
+	}
+	.edt{
+		height: 20px;}
+	.edt:focus{
+		height: 30px;}
+
+	@keyframes resaltar {
+		0%{font-size: 15px;}
+		/* 50%{font-size: 25px;} */
+		100%{font-size: 32px;}
+		
+	}
+	.slogan{
+		animation-name: resaltar;
+		animation-iteration-count: initial;
+		animation-duration: 4s;
+	}
+}
